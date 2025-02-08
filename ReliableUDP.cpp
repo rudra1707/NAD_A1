@@ -41,14 +41,16 @@ class FlowControl
 {
 public:
 
-	void calculateTransferSpeed(clock_t startTime, clock_t endTime, size_t fileSize)
-	{
+	void calculateTransferSpeed(clock_t startTime, clock_t endTime, size_t fileSize) {
 		double transferTime = (double)(endTime - startTime) / CLOCKS_PER_SEC;
 		double speedMbps = (fileSize * 8.0) / (transferTime * 1e6);
 
 		printf("Transfer completed in %.3f seconds\n", transferTime);
 		printf("Transfer speed: %.3f Mbps\n", speedMbps);
 	}
+
+
+
 
 	FlowControl()
 	{
